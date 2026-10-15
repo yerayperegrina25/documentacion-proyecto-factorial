@@ -1,0 +1,19 @@
+name: Pipeline de prueba de Yeray Peregrina
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Ejecutar pipeline de prueba
+        run: |
+          echo "Pipeline de prueba de Yeray Peregrina"
